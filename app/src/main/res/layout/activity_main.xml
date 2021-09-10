@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -73,14 +74,23 @@
                 android:layout_width="match_parent"
                 android:layout_height="16dp" />
 
-            <Button
+            <com.dd.processbutton.iml.ActionProcessButton
                 android:id="@+id/deleteAll"
                 android:layout_width="300dp"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
                 android:layout_gravity="center"
-                android:background="@color/red"
                 android:text="Hapus Semua"
-                android:textColor="@color/white" />
+                android:textColor="@android:color/white"
+                android:textSize="14sp"
+                custom:pb_colorComplete="@color/green_complete"
+                custom:pb_colorNormal="@color/blue_normal"
+                custom:pb_colorPressed="@color/blue_pressed"
+                custom:pb_colorProgress="@color/purple_progress"
+                custom:pb_textComplete="Berhasil"
+                custom:pb_textProgress="Loading"
+                custom:pb_textError="Error"
+                custom:pb_colorError="@color/red_error" />
 
         </LinearLayout>
 
